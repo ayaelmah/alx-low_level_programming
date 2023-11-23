@@ -1,25 +1,47 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
+ * str_concat - concatenates two strings.
+ * @s1: first string
+ * @s2: second string
  *
- * Return: Nothing.
+ * Return: a pointer to a newly allocated space in memory which
+ * contains the contents of s1, followed by the contents of s2,
+ * and null terminated. NULL on failure
  */
-char *create_array(unsigned int size, char c)
+char *str_concat(char *s1, char *s2)
 {
-  unsigned int i;
+	int i, j, len1, len2, len;
+	char *result;
 
-  if (size == 0)
-      return (NULL);
+	len1 = len2 = 0;
 
-  char *s = (char*)malloc(size * sizeof(char));
+	if (s1 != NULL)
+	{
+		i = 0;
+		while (s1[i++] != '\0')
+			len1++;
+	}
 
-  for (i = 0; i < size; i++)
-    s[i] = c;
+	if (s2 != NULL)
+	{
+		i = 0;
+		while (s2[i++] != '\0')
+			len2++;
+	}
 
-  return (s);
+	len = len1 + len2;
+	result = (char *)malloc(sizeof(char) * (len + 1));
+	if (result == NULL)
+		return (NULL);
+
+	for (i = 0; i < len1; i++)
+		result[i] = s1[i];
+	for (j = 0; j < len2; j++, i++)
+		result[i] = s2[j];
+	result[len] = '\0';
+
+	return (result);
 }
