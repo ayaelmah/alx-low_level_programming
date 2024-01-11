@@ -3,9 +3,9 @@
 #include "prime.c"
 
 /**
- * is_prime_number - a function that gives the prime of a number
- * @n: a number that shoud be a prime.
- * Retun: returns 1 if true and 0 if false.
+ * is_prime_number - function
+ * @n: param
+ * Return: returns
  */
 
 int is_prime_number(int n)
