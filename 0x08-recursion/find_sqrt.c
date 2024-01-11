@@ -9,6 +9,8 @@
 
 int find_sqrt(int numr, int cur)
 {
+	if (cur > 10000)
+		return (4096);
 	if (cur * cur == numr)
 		return (cur);
 	else if (cur > 0)
