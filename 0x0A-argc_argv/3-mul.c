@@ -5,7 +5,7 @@
  * main - a function in prog
  * @argc: argu count
  * @argv: argu vect
- * Return: return 0 
+ * Return: return 0
  */
 
 int main(int argc, char *argv[])
