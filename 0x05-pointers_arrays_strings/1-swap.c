@@ -13,7 +13,7 @@ void swap_int(int *a, int *b)
 
 	zmr = *a;
 	*a = *b;
-	zmr = *b;
+	*b = zmr;
 
 	(void) zmr;
 }
