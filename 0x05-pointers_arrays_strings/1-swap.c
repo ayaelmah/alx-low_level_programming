@@ -15,5 +15,5 @@ void swap_int(int *a, int *b)
 	*a = *b;
 	zmr = *b;
 
-	printf("%d\n", zmr);
+	(void) zmr;
 }
